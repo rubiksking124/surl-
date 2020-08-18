@@ -5,7 +5,7 @@ app.set("view engine", "ejs");
 let Shorturl1 = require("./models/shorturl.js");
 let mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://Summer:scotland217@cluster0.qjfsh.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "mongo db url",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
