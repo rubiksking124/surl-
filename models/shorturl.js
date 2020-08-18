@@ -1,18 +1,18 @@
-const mongoose = require("mongoose")
-let shortid = require("shortid")
+const mongoose = require("mongoose");
+let shortid = require("shortid");
 
 let shortURl = mongoose.Schema({
-full:{
-type: String,
-  required: true
-},
-  short:{
+  full: {
+    type: String,
+    required: true
+  },
+  short: {
     type: String,
     required: true,
     default: shortid.generate,
     unique: true
   },
-  clicks:{
+  clicks: {
     type: Number,
     required: true,
     default: 0
@@ -20,8 +20,10 @@ type: String,
   auth: {
     type: String
   },
-  ip: {
-type: String
+
+  createdAt: {
+    type: Date,
+    default: Date.now
   }
-})
-module.exports = mongoose.model('Shorturl5', shortURl)
+});
+module.exports = mongoose.model("Shorturl6", shortURl);

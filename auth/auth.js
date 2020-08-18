@@ -13,7 +13,8 @@ router.post("/new", async (req, res) => {
         full: test.full,
         short: test.short,
         clicks: test.clicks,
-        ip: test.ip
+
+        date: test.createdAt.toLocaleDateString()
       });
     }
     var getIP = require("ipware")().get_ip;
@@ -24,7 +25,8 @@ router.post("/new", async (req, res) => {
       if (!shorturl) return res.json({ error: "URL not found" });
       await Shorturl1.create({
         full: shorturl,
-        ip: JSON.stringify(ipInfo)
+
+        date: test.createdAt.toLocaleDateString()
       });
       let test = await Shorturl1.findOne({ full: shorturl });
       return res.json({ success: true, test: test.short });
@@ -34,7 +36,8 @@ router.post("/new", async (req, res) => {
       await Shorturl1.create({
         full: shorturl,
         short: short,
-        ip: JSON.stringify(ipInfo)
+
+        date: test.createdAt.toLocaleDateString()
       });
       let test = await Shorturl1.findOne({ full: shorturl });
       return res.json({ success: true, test: test.short });

@@ -26,6 +26,7 @@
           <th class="short">Short URL</th>
 
           <th class="clicks">Clicks</th>
+        <th class="teee">Date</th>
         
       
         </tr>
@@ -36,6 +37,7 @@
       <td><a href="<%= shorturl.full %>"><%= shorturl.full %></a></td>
         <td><a href="<%= shorturl.short %>"><%= shorturl.short %></a></td>
         <td id="clickCount"><%= shorturl.clicks %></td>
+          <td class="card-subtitle mb-2" id="teee"><%= shorturl.createdAt.toLocaleDateString() %></td>
         </tr>
       
       </tbody>
@@ -64,6 +66,12 @@ color: white;
 color: white;
     }
     #clickCount{
+      color: white;
+    }
+    #teee{
+      color: white;
+    }
+     .teee{
       color: white;
     }
     </style>
