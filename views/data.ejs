@@ -1,0 +1,64 @@
+<%- include("header") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Data</title>
+  </head>
+  <body>
+    <div id="container">
+      
+   
+   
+    <table class="table table-striped table-responsive">
+      <thead>
+      <tr>
+        <th class="full">Full URL</th>
+        
+          <th class="short">Short URL</th>
+
+          <th class="clicks">Clicks</th>
+        
+      
+        </tr>
+      </thead>
+      <tbody>
+        <% shorturls.forEach(shorturl => {%>
+        <tr>
+      <td><a href="<%= shorturl.full %>"><%= shorturl.full %></a></td>
+        <td><a href="<%= shorturl.short %>"><%= shorturl.short %></a></td>
+        <td id="clickCount"><%= shorturl.clicks %></td>
+          <td><a href="/<%= shorturl.short %>/datas" class="btn btn-primary">Info</a></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+       </div>
+  </body>
+  <style>
+  body{
+background-color: #000000
+  }
+  h1{
+color
+    : white;
+  }
+      #t{
+color
+    : white;
+  }
+    .full{
+color: white;
+    }
+    .clicks{
+      color: white;
+    }
+    .short{
+color: white;
+    }
+    #clickCount{
+      color: white;
+    }
+    </style>
+</html>

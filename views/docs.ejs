@@ -1,0 +1,92 @@
+<%- include("header") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<meta property="og:title" content="Surl-" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="How to use the surl- api" />
+    <meta name="description" content="How to use the surl- api" />
+  
+    <meta name="theme-color" content="#ff9966" />
+    <link href="https://fonts.googleapis.com/icon?family=Markazi+Text" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>How to use the api</title>
+  </head>
+  <body>
+    <div id="container">
+      
+   
+    <h1 >
+     API
+    </h1>
+    <pre  class='prettyprint'>
+const fetch = require('node-fetch')
+let options = fetch(`https://surl-.glitch.me/api/new`, {
+  method: 'POST',
+  body: JSON.stringify({
+    "full": url,
+
+
+  }),
+  headers: {
+    'Content-Type': 'application/json'
+  }
+
+
+
+}).then(
+  c => c.json()
+).then(c =>
+
+ console.log(c)
+
+).catch(err => console.log(err))
+
+</pre>
+    
+       </div>
+   
+  </body>
+  <style>
+  body{
+background-color: #000000
+  }
+  h1{
+color
+    : white;
+  }
+      #t{
+color
+    : white;
+  }
+    .full{
+color: white;
+    }
+    .clicks{
+      color: white;
+    }
+    .short{
+color: white;
+    }
+    #clickCount{
+      color: white;
+    }
+    </style>
+    <style>
+   code, .code, pre {
+	 font-family: 'Source Code Pro';
+	 background: #292929;
+	 color: orange;
+	 font-size: 16px;
+	 padding: 0;
+	 padding: 10px;
+}
+
+ code{
+	 color: orange;
+}
+ 
+    }
+  </style>
+</html>
